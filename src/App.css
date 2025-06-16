@@ -18,3 +18,29 @@ body {
 .timer {
   font-size:20rem;
 }
+
+.timeup {
+  font-size:15rem;
+}
+button.set-time-btn {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00f260, #0575e6); /* green to blue gradient */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 242, 96, 0.2);
+}
+
+button.set-time-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 242, 96, 0.3);
+}
+
+button.set-time-btn:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}

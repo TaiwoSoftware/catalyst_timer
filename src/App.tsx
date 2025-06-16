@@ -95,10 +95,10 @@ const App = () => {
 
       {timeUp && (
         <div className="text-center animate-fade-in-up">
-          <h1 className="text-red-600 text-6xl font-extrabold mb-6">Time Up!</h1>
+          <h1 className="text-red-600 timeup text-6xl font-extrabold mb-6">Time Up!</h1>
           <button
             onClick={handleReset}
-            className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 transition-all text-lg font-semibold"
+            className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 set-time-btn transition-all text-lg font-semibold"
           >
             Set Time
           </button>
