@@ -57,21 +57,22 @@ const App = () => {
     <div className="bg-black text-white min-h-screen flex items-center justify-center">
       {!isRunning && !timeUp && (
         <div className="flex flex-col gap-4 animate-fade-in">
-          <h1 className="text-4xl font-bold text-center mb-4">Set Timer</h1>
+          <h1 className="text-6xl font-bold text-center mb-4"> TIMER</h1>
           <div className="flex justify-center gap-4">
             <input
               type="number"
-              placeholder="Minutes"
+              placeholder="00"
               value={minutes}
               onChange={(e) => setMinutes(e.target.value)}
-              className="px-4 py-2 text-lg rounded bg-white text-black w-28 text-center"
+              className="px-4 py-2 text-4xl rounded outline-none border-none bg-transparent placeholder:text-white placeholder:text-4xl text-white w-28 text-center"
             />
+            <p className="text-4xl mt-2">:</p>
             <input
               type="number"
-              placeholder="Seconds"
+              placeholder="00"
               value={seconds}
               onChange={(e) => setSeconds(e.target.value)}
-              className="px-4 py-2 text-lg rounded bg-white text-black w-28 text-center"
+              className="px-4 py-2 text-4xl rounded outline-none border-none  bg-transparent placeholder:text-white placeholder:text-4xl text-white w-28 text-center"
             />
           </div>
           <button
@@ -98,7 +99,7 @@ const App = () => {
           <h1 className="text-red-600 timeup text-6xl font-extrabold mb-6">Time Up!</h1>
           <button
             onClick={handleReset}
-            className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 set-time-btn transition-all text-lg font-semibold"
+            className="bg-white text-black px-6 py-2  hover:bg-gray-200 set-time-btn transition-all text-lg font-semibold"
           >
             Set Time
           </button>
