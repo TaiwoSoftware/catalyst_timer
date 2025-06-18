@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css'
+import logo from './assets/catalystlogo.jpg';
 const App = () => {
   const [minutes, setMinutes] = useState('');
   const [seconds, setSeconds] = useState('');
   const [countdown, setCountdown] = useState<number | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [timeUp, setTimeUp] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const totalSeconds = (parseInt(minutes) || 0) * 60 + (parseInt(seconds) || 0);
 
@@ -54,7 +55,9 @@ const App = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center">
+    <>
+    <img src={logo} className='rounded-lg' alt="catalyst" />
+    <div className="bg-black text-white  flex items-center justify-center">
       {!isRunning && !timeUp && (
         <div className="flex flex-col gap-4 animate-fade-in">
           <h1 className="text-6xl font-bold text-center mb-4"> TIMER</h1>
@@ -79,7 +82,7 @@ const App = () => {
             onClick={handleStart}
             className="bg-white text-black px-6 py-2 mt-4 rounded hover:bg-gray-200 transition-all text-lg font-semibold"
           >
-            Start Countdown
+            Start Timer
           </button>
         </div>
       )}
@@ -106,6 +109,7 @@ const App = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
